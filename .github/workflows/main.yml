@@ -13,6 +13,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+          
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@latest
 
       - name: Run Test
         if: always()
