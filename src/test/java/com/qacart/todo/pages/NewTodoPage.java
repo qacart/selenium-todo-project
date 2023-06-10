@@ -2,7 +2,6 @@ package com.qacart.todo.pages;
 
 import com.qacart.todo.apis.TodoApi;
 import com.qacart.todo.models.User;
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
