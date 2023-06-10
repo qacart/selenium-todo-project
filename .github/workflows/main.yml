@@ -4,7 +4,7 @@ on: [ push ]
 
 jobs:
     test:
-        runs-on: macos-latest
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
 
@@ -18,7 +18,5 @@ jobs:
               uses: browser-actions/setup-chrome@latest
 
             - name: Run Test
-              if: always()
               run: mvn clean test
-              continue-on-error: true
 
