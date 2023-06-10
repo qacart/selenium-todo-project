@@ -37,6 +37,7 @@ public class RegisterPage {
         driver.get(ConfigUtils.getInstance().getBaseUrl() +"/signup");
     }
 
+    @Step("Register using the UI")
     public void register(WebDriver driver, User user) {
         driver.findElement(firstNameInput).sendKeys(user.getFirstName());
         driver.findElement(lastNameInput).sendKeys(user.getLastName());
@@ -45,7 +46,7 @@ public class RegisterPage {
         driver.findElement(confirmPasswordInput).sendKeys(user.getPassword());
         driver.findElement(submitButton).click();
     }
-
+    @Step("Register using the API")
     public void registerUsingApi(WebDriver driver, User user) {
         Response res = UserApi.getInstance().register(user);
         String access_token = res.path("access_token");
