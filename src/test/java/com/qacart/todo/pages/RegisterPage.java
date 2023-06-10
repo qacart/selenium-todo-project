@@ -3,6 +3,7 @@ package com.qacart.todo.pages;
 import com.qacart.todo.apis.UserApi;
 import com.qacart.todo.models.User;
 import com.qacart.todo.utils.ConfigUtils;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;

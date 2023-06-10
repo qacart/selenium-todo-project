@@ -5,13 +5,13 @@ import com.qacart.todo.models.User;
 import com.qacart.todo.pages.NewTodoPage;
 import com.qacart.todo.pages.RegisterPage;
 import com.qacart.todo.pages.TodoPage;
+import io.qameta.allure.Feature;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
 public class TodoTest extends BaseTest {
-
-    @Test
+    @Test(description = "Should be able to add a todo")
     public void shouldBeAbleToAddATodo() {
         User user = new User();
         RegisterPage.getInstance().load(driver.get());
@@ -22,7 +22,7 @@ public class TodoTest extends BaseTest {
         Assert.assertEquals(text,"Learn Selenium");
     }
 
-    @Test
+    @Test(description = "Should be able to delete a todo")
     public void shouldBeAbleToDeleteATodo() {
         User user = new User();
         RegisterPage.getInstance().load(driver.get());

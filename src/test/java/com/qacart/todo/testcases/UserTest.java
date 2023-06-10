@@ -3,13 +3,13 @@ import com.qacart.todo.base.BaseTest;
 import com.qacart.todo.models.User;
 import com.qacart.todo.pages.RegisterPage;
 import com.qacart.todo.pages.TodoPage;
+import io.qameta.allure.Feature;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
 public class UserTest extends BaseTest {
 
-    @Test
+    @Test(description = "Should be able to signup")
     public void shouldBeAbleToRegisterToTheApplication() {
         User user = new User();
         RegisterPage.getInstance().load(driver.get());
